@@ -10,10 +10,17 @@ Vehicule :: Vehicule(int vitesseMax, int nbPlaces, int occupants){
 
 void Vehicule :: demarrer(){
 
+    if(this->etat_ != ARRET){
+        throw invalid_argument("Le véhicule est déja en marche !");
+    }
+    etat_ = MARCHE;
 }
     
 void Vehicule :: arreter(){
-    
+        if(this->etat_ != MARCHE){
+        throw invalid_argument("Le véhicule est déja en marche !");
+    }
+    etat_ = ARRET;
 }
     
 void Vehicule :: depanner(){
@@ -22,8 +29,11 @@ void Vehicule :: depanner(){
     
 void Vehicule :: accelerer(int increment){
     int new_speed = this->vitesse_ + increment;
+
     if(new_speed > this->vitesseMax_ || new_speed < 0){
-        throw std::invalid_argument("Invalid speed.");
+        throw invalid_argument("Vitesse invalide.");
+    } else {
+        this->vitesse_ = new_speed;
     }
 }
     
