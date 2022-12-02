@@ -11,10 +11,12 @@ Bateau :: Bateau(int vitesseMax, int nbPlaces1, int occupants0) : Vehicule(vites
 }
 
 void Bateau :: demarrer(){
-    cout << "En avant fluffycoquin !" << endl;
+    cout << "Je vais te demarrer!" << endl;
+    Vehicule :: demarrer();
 }
     
 void Bateau :: arreter(){
-    cout << "On arrête tout fluffycoquin !" << endl;
+    cout << "Arrête toi brigarde des stups!" << endl;
+    Vehicule :: arreter();
 }
     
