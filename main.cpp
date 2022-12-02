@@ -2,7 +2,8 @@
 #include <iostream>
 #include <Windows.h>
 
-#include "Vehicule.hpp"
+//#include "Vehicule.hpp"
+#include "Bateau.hpp"
 
 using namespace std;
 
@@ -22,7 +23,7 @@ int main(){
     cout << "occupants : ";
     cin >> occupants;
 
-    Vehicule * Vehicule = new class Vehicule(vitesse_max, places, occupants);
+    Bateau * Vehicule = new class Bateau(vitesse_max, places, occupants);
 
     int temp;
     string string_temp;
