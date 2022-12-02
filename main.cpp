@@ -9,7 +9,8 @@ int main(){
     cout << "Hello les loosers !" << endl;
 
     try {
-        Vehicule * Vehicule = new Vehicule(0, 0, 0);
+        Vehicule v(0,0,0);
+        Vehicule * Vehicule = new Vehicule;
     }
 
     return 0;
