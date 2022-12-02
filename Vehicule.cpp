@@ -18,7 +18,7 @@ void Vehicule :: demarrer(){
     
 void Vehicule :: arreter(){
     if(this->etat_ != MARCHE){
-        throw invalid_argument("Le véhicule est déja en marche !");
+        throw invalid_argument("Le véhicule n'était pas en marche !");
     }
     etat_ = ARRET;
 }
@@ -38,19 +38,44 @@ void Vehicule :: accelerer(int increment){
 }
     
 void Vehicule :: monter(int nbOcc){
+    int nbOccupants = nbOcc + this->occupants_;
+    
+    if(nbOccupants > this->nbPlaces_){
+        throw invalid_argument("Pas assez de place dans le véhicule !");
+    }
 
+    this->occupants_ = nbOccupants;
 }
 
 void Vehicule :: descendre(int nbOcc){
+    int nbOccupants = this->occupants_ - nbOcc;
+    
+    if(nbOccupants < 0){
+        throw invalid_argument("Pas assez d'occupants dans le véhicule !");
+    }
 
+    this->occupants_ = nbOccupants;
 }
 
 void Vehicule :: mettreEnPanne(double random){
-
+    if(random > 0.5){
+        etat_ = PANNE_SEVERE;
+    } else {
+        etat_ = PANNE_LEGERE;
+    }
 }
-    
+
 string Vehicule :: getEtat() const{
-    return "";
+    switch(this->etat_){
+        case ARRET:
+            return "arret";
+        case MARCHE:
+            return "marche";
+        case PANNE_LEGERE:
+            return "panne legere";
+        case PANNE_SEVERE:
+            return "panne severe";
+    }
 }
     
 Vehicule :: ~Vehicule(){
