@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <iostream>
+#include <Windows.h>
 
 #include "Vehicule.hpp"
 
