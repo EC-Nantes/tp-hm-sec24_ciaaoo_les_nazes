@@ -17,7 +17,7 @@ int main(){
     cin >> vitesse_max;
     cout << "places : ";
     cin >> places;
-    cout << "occupants";
+    cout << "occupants : ";
     cin >> occupants;
 
     Vehicule * Vehicule = new class Vehicule(vitesse_max, places, occupants);
