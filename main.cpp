@@ -9,9 +9,9 @@ int main(){
     cout << "Hello les loosers !" << endl;
 
     try {
-        Vehicule * Vehicule = new Vehicule(0, 0, 0);
+        Vehicule * Vehicule = new class Vehicule(0, 0, 0);
     } catch(){
-        
+
     }
 
     return 0;
