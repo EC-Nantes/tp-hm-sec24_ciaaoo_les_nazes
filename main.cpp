@@ -7,6 +7,8 @@
 using namespace std;
 
 int main(){
+     SetConsoleOutputCP(CP_UTF8);
+
     cout << "Hello les loosers !" << endl;
 
     int vitesse_max;
