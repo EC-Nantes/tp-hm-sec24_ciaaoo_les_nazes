@@ -18,7 +18,7 @@ void Vehicule :: demarrer(){
     
 void Vehicule :: arreter(){
         if(this->etat_ != MARCHE){
-        throw invalid_argument("Le véhicule est déja en marche !"); 
+        throw invalid_argument("Le véhicule est déja en à l'arrêt !"); 
     }
     etat_ = ARRET;
 }
